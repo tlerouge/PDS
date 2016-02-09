@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package bdd;
 
 import java.sql.Connection;
@@ -12,7 +16,7 @@ import java.util.List;
 public class TestMethode {
    
     public void ajouterFonction(int id, String title) throws SQLException{
-        Connection db = Database.getConnection();
+    Connection db = Database.getConnection();
         String req = "INSERT INTO FUNCTIONS(ID_FUNCTIONS, TITLE) VALUES (?, ?)";
         PreparedStatement ordre = db.prepareStatement(req);
         ordre.setInt(1, id);

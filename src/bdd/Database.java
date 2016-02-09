@@ -1,13 +1,18 @@
 package bdd;
 import java.sql.*;
 
+/** Représente la base de données videos. Fournit une connexion à
+ * cette base (via <code>getConnection()</code>.
+ *
+ * @author plasse
+ */
 public class Database {
 
   protected static final String DRIVER_NAME = "oracle.jdbc.OracleDriver";
-  protected static final String DB_NAME = "simulation";
-  protected static final String URL = "jdbc:oracle:thin:@localhost:1521:XE";
-  protected static final String USER = "SYSTEM";
-  protected static final String PASSWORD = "14111995";
+  protected static final String URL = "jdbc:oracle:thin:@//localhost:1521/orcl";
+  
+  protected static final String USER = "pds";
+  protected static final String PASSWORD = "tony";
 
   public enum SortOrder { ASC, DESC; }
 
